@@ -1,15 +1,19 @@
 package com.cice.gestionequipo.dao;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.List;
 
 import com.cice.gestionequipo.entidades.Entrenador;
 import com.cice.gestionequipo.entidades.Jugador;
+import com.cice.gestionequipo.entidades.Paritido;
 import com.cice.gestionequipo.entidades.Personal;
 import com.cice.gestionequipo.entidades.Utillero;
 
 public class DataSource {
 
+	public static List<Paritido> partidos;
 	public static Map<Integer, Personal> plantilla;
 	public DataSource() {
 		super();
@@ -20,7 +24,7 @@ public class DataSource {
 		Jugador jugador3 = new Jugador(5, "Pepe", "Feo y Calvo", 3000000.00);
 		Jugador jugador4 = new Jugador(6, "Cristiano", "Ronaldo", 25000000.00);
 		Jugador jugador5 = new Jugador(7, "Favio", "Canavaro", 2000000.00);
-		Jugador jugador6 = new Jugador(8, "", "Casillas", 1000000.00);
+		Jugador jugador6 = new Jugador(8, "Jacinto", "Casillas", 1000000.00);
 		Jugador jugador7 = new Jugador(9, "Roberto", "Soldado", 5000000.00);
 		Jugador jugador8 = new Jugador(10, "Sergio", "Ramos", 5000000.00);
 		Jugador jugador9 = new Jugador(11, "Juan", "Batistao", 5000000.00);
@@ -32,6 +36,7 @@ public class DataSource {
 		Jugador jugador15 = new Jugador(17, "Raul", "Bravo", 5000000.00);
 		Utillero utillero = new Utillero(18, "Pedro", "el rey de la toalla", 2700.50);
 		plantilla = new HashMap<>();
+		partidos = new ArrayList<Paritido>();
 		plantilla.put(entrenador.getId(), entrenador);
 		plantilla.put(entrenador2.getId(), entrenador2);
 		plantilla.put(jugador.getId(), jugador);
